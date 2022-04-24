@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    :root{
+        --main-bg-image :url("./Wallpapers/newtab6.webp")
+    }
+#cover{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--main-bg-image);
+    filter: contrast(130%);
+    background-size: cover;
+}
+
+.Names{
+    position: absolute;
+    display: flex;
+    width: 756px;
+    height: 65px;
+    background: linear-gradient(180deg, rgba(162, 190, 180, 0.4) 0%, rgba(162, 190, 180, 0) 100%);
+    align-self: flex-start;
+    top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.type{
+    width: 35em;
+    height: 4em;
+    border-radius: 10px 0px 0px 10px;
+    border-top: none;
+    border-left: none;
+    display: flex;
+    background: rgba(15, 15, 143, 0.289);
+    justify-content: center;
+    align-items: center;
+    
+}
+.type:focus{
+    background: transparent;
+    outline: none;
+}
+#search{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0);
+    width: 35em;
+    height: 4em;
+    border: none;
+    text-align: center;
+    font-size: 1.2em;
+    text-shadow: 20px yellow;
+    color: rgb(0, 242, 250);
+}
+#search::selection{
+    background-color: #707AFF;
+    color: rgb(0, 242, 250)
+}
+#search:focus{
+    outline: none;
+}
+button{
+    width: 78px;
+    height: 42px;
+    background: #dfffe8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    margin-left: 10px;
+}
+button:hover{
+   background-color: rgba(255, 192, 203, 0.85);
+   transition: all 0.5s ease-in-out;
+   animation: animBtn 1.5s ease;
+   color: blue;
+}
+
+@keyframes animBtn {
+
+        0%{
+             transform: rotateZ(0deg);
+        }
+        10%{
+             transform: rotateZ(-2deg)
+        }
+        50%{
+            transform: rotateZ(5deg)
+        }
+        75%{
+            transform: rotateZ(-10deg)
+        }
+        100%{
+            transform: rotateZ(2deg)
+        }
+}
+
+.quotes{
+    width: 35em;
+    height: 58px;
+    border-radius: .2em .2em .2em .2em;
+    position: absolute;
+    bottom: .5em;
+}
+.side-bar{
+    width: 89px;
+    height: 528px;
+    background: rgba(252, 252, 252, 0.144);
+    border-radius: 0px 10px 10px 0px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.inner-container{
+    width: 73px;
+    height: 511px;
+    background: #061d7075;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    visibility: hidden;
+}
+.side-bar:hover{
+    animation: animae 1s ease;
+    transition: 1s ease-in-out;
+    opacity: 1; 
+}
+.side-bar:hover .inner-container{
+    visibility: visible;
+}
+@keyframes animae {
+    from{
+        height: 0px;
+        width: 0px;
+    }
+    to{
+        height: 528px;
+        width: 91px;
+    }
+}
+.inner-container > #facebook{
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner-container > #linkedin{
+    width: 48px;
+    height: 48px;
+    outline: none;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner-container > #youtube{
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner-container > #github{
+    width: 49px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner-container > #slack{
+    width: 49px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.021);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner-container > #awesome{
+    width: 49px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner-container > #y2mate{
+    width: 49px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner-container > #facebook > .fa-facebook-square{
+    font-size: 58px;
+    color: rgba(22, 22, 168, 0.829);
+}
+
+.inner-container > #linkedin >.fa-linkedin{
+    font-size: 58px;
+    color: #0077B7;
+}
+.inner-container > #youtube >.fa-youtube{
+    font-size: 63px;
+    color: #FF0000;
+}
+.inner-container > #github >.fa-github-square{
+    font-size: 58px;
+}
+.inner-container > #slack >.fa-stack-overflow{
+    font-size: 58px;
+    color: #F2740D;
+}
+.inner-container > #awesome >.fa-square-font-awesome{
+    font-size: 58px;
+    color: rgb(72, 72, 230);
+}
+.inner-container > #y2mate{
+    font-size: 30px;
+    color: white;
+}
+h1 > span{
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+.anim{
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    animation: animedanim 2s ease;
+}
+
+@keyframes animedanim{
+    from{
+        color: black;
+        transform: translate(10em,10em);
+    }
+    to{
+        color: blue;
+        transform: translate(0em,0em);
+    }
+}
+.time {
+    display: flex;  
+    background-color: rgba(49, 63, 255, 0.172);
+    width: 10em;
+    height: 4em;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 20px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    top: 30px;
+    left: 0;
+    opacity: 0;
+}
+@keyframes time1 {
+    from{
+        width: 0px;
+        height: 4em;
+    }
+    to{
+        width: 10em;
+        height: 4em;
+    }
+}
+#time2{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    visibility: hidden;
+}
+
+#time2 > div:nth-child(1){
+    position: absolute;
+    color: rgb(0, 242, 250);
+    top: 10px;
+    left: -20px;
+    visibility: hidden;
+    opacity: 0;
+}
+#time2 > div:nth-child(2){
+    position: absolute;
+    color: rgb(0, 242, 250);
+    right: 0px;
+    bottom: 1px;
+    visibility: hidden;
+    opacity: 0;
+}
+#dates{
+    visibility: hidden;
+    color: rgb(0, 242, 250);
+    opacity: 0;
+}
+.time:hover{
+    opacity: 1;
+    animation: time1 1s ease;
+    transition: 1s ease-in-out;
+ }
+ .time:hover #time2{
+     visibility: visible;
+     transition: 1s ease-in-out;
+     opacity: 1;
+ }
+ .time:hover #time2 > div{
+     visibility: visible;
+     transition: 1s ease-in-out;
+     opacity: 1;
+ }
+ .time:hover #dates{
+     visibility: visible;
+     transition: 1s ease-in-out;
+     opacity: 1;
+ }
+ .dailyVerses.bibleVerse{
+     margin-top: 10px;
+     margin-left: 20px;
+     font-size: 10px;
+ }
+ .quotes{
+     font-size: 20px;
+     padding: 10px;
+     background: rgba(255, 255, 255, 0.131);
+     text-align: center;
+     overflow: hidden;
+     color: rgb(255, 255, 255);
+ }
+#border{
+   opacity: 0;
+   background-color: rgb(0, 242, 250);
+   width: 35em;;
+   height: 2.5px;
+   position: absolute;
+   bottom: 28em;
+   left: 38em;
+   border-bottom-left-radius: 30px;   
+}
+ 
+@keyframes transBorder{
+    from{
+        width: 0;
+        height: 0;
+    }
+    to{
+        width: 35em;
+        height: 2.5px;
+    }
+}
+
+@keyframes transBorderR{
+    from{
+        width: 32.4em;
+        height: 2.5px;
+    }
+    to{
+        width: 0;
+        height: 0;
+    }
+}
+.quotes:hover{
+    transition: all 2s ease-in-out;
+    background-color:rgba(171, 255, 237, 0.426);
+    color: white;
+}
+#dailyVersesWrapper > div:nth-of-type(2) {
+    display: none;
+}
